@@ -1,0 +1,13 @@
+project:
+  machine_name: blt
+command-hooks:
+ frontend-reqs:
+   dir: ${docroot}/themes/custom/blt
+   command: 'npm install'
+ frontend-assets:
+   dir: ${docroot}/themes/custom/blt
+   command: 'gulp sass'
+ post-config-import:
+   dir: '${docroot}'
+   command: "echo running the command now !;
+   blt cc;"
